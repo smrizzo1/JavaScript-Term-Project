@@ -1,0 +1,147 @@
+
+.parallax {
+    background-image:url("garden.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+nav{
+    margin-left:15%;
+   
+}
+
+button{
+    width:200px;
+    height:50px;
+    margin-left:5%;
+    margin-top:3%;
+    color:white;
+    background-color:deeppink;
+    outline: darkgreen;
+    border-style:dotted;
+    opacity:.9;     
+}
+
+aside {
+    float:initial;
+   
+    margin-left:1%;
+}
+
+#buzzyButtons{
+    width:200px;
+    color:white;
+    background-color:none;  
+     
+}
+
+
+a:link{
+    color: white;
+    text-decoration:underline;
+    font-size: medium;
+}
+
+a:visited{
+    color:darkviolet;
+    text-decoration:underline;
+}
+
+a:hover{
+    color:yellow;
+    text-decoration: underline;
+}
+
+a:active{
+    color: white; 
+    text-decoration:underline;
+}
+
+
+body{
+    background-color:white;
+}
+
+#container {
+    width: 50px;
+    height: 100px;
+    position: relative;
+}
+
+#bee {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background-color: none;
+    margin-left: 10px;
+  }
+
+
+h2 {
+    color: darkviolet;
+    margin-left: 20%;
+    margin-right: 10%;
+    font-size: 2em;
+}
+
+h1 {
+    color: darkviolet;
+    margin-left: 10%;
+    margin-right:10%;
+    text-align: justify;  
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(180deg, yellow, white);
+    width:50%; 
+    margin-left: 25%;
+    box-shadow: 6px 6px 6px black;
+    border-radius: 5px;
+    padding: 2%;
+    opacity:80%;
+    color:darkviolet;
+}
+
+#moveMeTiles1, #moveMeTiles2{
+    background: none;
+    box-shadow: none;
+    border-radius: none;
+}
+
+#MoveMe1,
+#MoveMe2,
+#MoveMe3,
+#MoveMe4,
+#MoveMe5,
+#MoveMe6,
+#MoveMe7,
+#MoveMe8,
+#MoveMe9,
+#MoveMe10,
+#MoveMe11,
+#MoveMe12 {
+    border: solid;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding-top: 4%;
+    margin: 1%;
+    font-size: medium;
+    color: deeppink;
+    background-color: yellow;
+        }
+
+
+
+footer{
+      margin-top:10%;
+      background-color: deeppink;
+      width: 30%;
+      opacity:.5;
+      font-weight: 900;
+      color:black;
+  }
