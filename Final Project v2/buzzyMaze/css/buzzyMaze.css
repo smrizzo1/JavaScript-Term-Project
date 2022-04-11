@@ -1,0 +1,31 @@
+canvas {
+    margin-top: 3%;
+    border: 1px solid #d3d3d3;
+    background-image: url('../media/garden.jpg');
+    background-size: cover;
+    text-align: center;
+}
+
+body {
+    background-color: skyblue;
+}
+
+header {
+    color: green;
+    font-size: 1.5em;
+}
+
+div {
+    width: 100%;
+    text-align: center;
+    max-width: 800px;
+    margin-top: 1%;
+}
+
+
+footer {
+    margin-top: 18%;
+    bottom: 0;
+    left: 0;
+    font-size: small;
+}

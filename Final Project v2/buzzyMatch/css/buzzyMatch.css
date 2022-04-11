@@ -1,0 +1,587 @@
+/*sources: 
+(1) How to Code a Card Matching Game (https://www.youtube.com/watch?v=28VfzEiJgy4)
+ (2) Memory Card Game - JavaScript Tutorial (https://www.youtube.com/watch?v=ZniVgo8U7ek)
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+}
+
+
+body {
+    background-image: url("garden.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    background: none;
+    margin-left: 33.3%;
+    margin-top: 0;
+    width: 95%;
+}
+
+
+aside {
+    font-size: xx-large;
+    font-weight: bolder;
+    color: darkorchid;
+    text-shadow: 1px 1px 1px black;
+    margin-top: 7%;
+    margin-bottom: -6%;
+    margin-left: 10%;
+
+}
+
+section {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: 10%;
+    background: linear-gradient(180deg, yellow, white);
+    box-shadow: 6px 6px 6px black;
+    border-radius: 5px;
+    padding: 2%;
+    opacity: 90%;
+    color: darkviolet;
+}
+
+nav {
+    width: 400px;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+li a {
+    float: left;
+    text-align: center;
+    background-color: deeppink;
+    opacity: .8;
+    border-style: outset;
+    margin: 1%;
+    padding: 1%
+}
+
+
+#gameTextPlayAgain {
+    font-size: .5em;
+}
+
+@keyframes gameText-grow {
+
+    /*  text expansion animation idea taken from (2) */
+    from {
+        font-size: 0;
+    }
+
+    to {
+        font-size: 5em;
+    }
+}
+
+#winText.hidden,
+#oneText.hidden,
+#threeText.hidden,
+#fiveText.hidden,
+#sevenText.hidden {
+    visibility: hidden;
+}
+
+#winText.visible,
+#oneText.visible,
+#threeText.visible,
+#fiveText.visible,
+#sevenText.visible {
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    animation: gameText-grow 500ms forwards;
+    color: darkorchid;
+    text-shadow: 4px 4px 4px black;
+    font-weight: 700;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.gameCard {
+    /* card design CSS from  (2)*/
+    width: 15%;
+    height: 25%;
+    position: relative;
+    margin: 9px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .3s;
+}
+
+.gameCard:active {
+    /* card design CSS from  (2)*/
+    transform: scale(.97);
+    transition: transform .3s;
+}
+
+.gameCard:hover {
+    transform: scale(1.1);
+    margin: none;
+}
+
+.gameCard.flip {
+    /* card design CSS from  (2)*/
+    transform: rotateY(180deg);
+}
+
+.gameCard.freeze {
+    /* card design CSS from  (2)*/
+    animation: none;
+    backface-visibility: hidden;
+
+}
+
+.gameCard.flutter {
+    animation: myFlutter .7s;
+}
+
+.frontCard {
+    /* card design CSS from  (2)*/
+    border: 2px solid black;
+    background-image: url(./garden.jpg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+    padding: 2%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+
+}
+
+.backCard {
+    /* card design CSS from  (2)*/
+    border: 2px solid black;
+    background-image: url(./garden.jpg);
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    padding: 1%;
+    backface-visibility: hidden;
+
+}
+
+@keyframes myFlutter {
+    0% {
+        transform: rotate(-1deg);
+    }
+
+    5% {
+        transform: rotate(1deg);
+    }
+
+    10% {
+        transform: rotate(-1deg);
+    }
+
+    15% {
+        transform: rotate(1deg);
+    }
+
+    20% {
+        transform: rotate(-1deg);
+    }
+
+    25% {
+        transform: rotate(1deg);
+    }
+
+    30% {
+        transform: rotate(-1deg);
+    }
+
+    35% {
+        transform: rotate(1deg);
+    }
+
+    40% {
+        transform: rotate(-1deg);
+    }
+
+    45% {
+        transform: rotate(1deg);
+    }
+
+    50% {
+        transform: rotate(-1deg);
+    }
+
+    55% {
+        transform: rotate(1deg);
+    }
+
+    60% {
+        transform: rotate(-1deg);
+    }
+
+    65% {
+        transform: rotate(1deg);
+    }
+
+    70% {
+        transform: rotate(-1deg);
+    }
+
+    75% {
+        transform: rotate(1deg);
+    }
+
+    80% {
+        transform: rotate(-1deg);
+    }
+
+    85% {
+        transform: rotate(1deg);
+    }
+
+    90% {
+        transform: rotate(-1deg);
+    }
+
+    95% {
+        transform: rotate(1deg);
+    }
+
+    100% {
+        transform: rotate(-1deg);
+    }
+}
+
+
+
+@media only screen and (max-width:1024px) {
+
+    section {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -12%;
+        margin-left: 15%
+    }
+
+    .gameCard {
+        width: 13%;
+        height: 22%;
+        position: relative;
+        margin-left: 2%;
+        transform: scale(1);
+        transform-style: preserve-3d;
+        transition: transform .3s;
+    }
+
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        background: none;
+        width: auto;
+        margin-left: 25%;
+        margin-top: 5%;
+    }
+
+
+    aside {
+        font-size: x-large;
+        font-weight: bolder;
+        color: darkorchid;
+        text-shadow: 1px 1px 2px black;
+        margin-bottom: 5%;
+
+    }
+
+
+}
+
+
+
+@media only screen and (max-width:800px) {
+
+    section {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -12%;
+        margin-left: 15%
+    }
+
+    .gameCard {
+        width: 25%;
+        height: 25%;
+        position: relative;
+        margin-left: 5%;
+        transform: scale(1);
+        transform-style: preserve-3d;
+        transition: transform .3s;
+    }
+
+    nav {
+        width: 400px;
+    }
+
+    ul {
+        list-style-type: none;
+        overflow: hidden;
+
+    }
+
+    li a {
+        float: left;
+        text-align: center;
+        background-color: deeppink;
+        opacity: .8;
+        border-style: outset;
+        margin: 1%;
+        padding: 1%
+    }
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        background: none;
+        width: auto;
+        margin-left: 18%;
+        margin-top: 10%;
+    }
+
+    aside {
+        font-size: x-large;
+        font-weight: bolder;
+        color: darkorchid;
+        text-shadow: 1px 1px 2px black;
+        margin-bottom: 5%;
+
+    }
+
+
+}
+
+@media only screen and (max-width:675px) {
+
+    section {
+        width: 98%;
+        height: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10%;
+        margin-top: -13%;
+    }
+
+    .gameCard {
+        width: 14%;
+        height: 20%;
+        position: relative;
+        margin: 8px;
+        transform: scale(1);
+        transform-style: preserve-3d;
+        transition: transform .3s;
+    }
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        background: none;
+        width: auto;
+        margin-left: 10%;
+        margin-top: 10%;
+    }
+
+
+    aside {
+        font-size: large;
+        font-weight: bolder;
+        color: black;
+        text-shadow: 1px 1px 2px black;
+        margin-left: 8%;
+        margin-top: 3%;
+        margin-bottom: 0%;
+
+    }
+
+
+}
+
+@media only screen and (max-width:500px) {
+
+    section {
+        width: 98%;
+        height: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -10%;
+    }
+
+    .gameCard {
+        width: 13%;
+        height: 20%;
+        position: relative;
+        margin: 8px;
+        transform: scale(1);
+        transform-style: preserve-3d;
+        transition: transform .3s;
+    }
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        background: none;
+        width: auto;
+        margin-left: 7%;
+        margin-top: 10%;
+    }
+
+    aside {
+        font-size: large;
+        font-weight: bolder;
+        color: black;
+        text-shadow: 1px 1px 2px black;
+        margin-left: 6%;
+        margin-top: 8%;
+        margin-bottom: 0%;
+    }
+
+
+}
+
+
+@media only screen and (max-width:360px) {
+    section {
+        width: 98%;
+        height: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 5%;
+        margin-right: auto;
+        margin-top: -15%;
+        margin-bottom: 10%;
+    }
+
+    .gameCard {
+        width: 13%;
+        height: 20%;
+        position: relative;
+        margin: 6px;
+        transform: scale(1);
+        transform-style: preserve-3d;
+        transition: transform .3s;
+    }
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        background: none;
+        width: auto;
+        margin-left: 5%;
+        margin-top: 10%;
+    }
+
+    h1,
+    h2 {
+        margin-left: 10%;
+    }
+
+    aside {
+        font-size: large;
+        font-weight: bolder;
+        color: black;
+        text-shadow: 1px 1px 2px black;
+        margin-left: 6%;
+        margin-top: 4%;
+        margin-bottom: -5%;
+    }
+
+}
+
+
+@media only screen and (max-width:320px) {
+    section {
+        width: 96%;
+        height: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 2%;
+        margin-top: -15%;
+        margin-bottom: 12%;
+    }
+
+    .gameCard {
+        width: 13%;
+        height: 20%;
+        position: relative;
+        margin: 5px;
+        transform: scale(1);
+        transform-style: preserve-3d;
+        transition: transform .3s;
+    }
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        background: none;
+        width: auto;
+        margin-left: 9%;
+        margin-top: 10%;
+    }
+
+    nav {
+        width: 300px;
+    }
+
+    li a {
+        font-size: x-small;
+    }
+
+    header {
+        margin-left: -4%;
+    }
+
+    h1,
+    h2 {
+        margin-left: 4%;
+        text-shadow: none;
+
+    }
+
+    aside {
+        font-size: large;
+        font-weight: bolder;
+        color: black;
+        text-shadow: 1px 1px 2px black;
+        margin-left: 6%;
+        margin-top: 4%;
+        margin-bottom: -5%;
+    }
+}
