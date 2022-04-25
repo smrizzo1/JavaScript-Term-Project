@@ -1,0 +1,206 @@
+/*1) taken from Word Search Game using jQuery by  Crypters Infotech Parts 1 - 12 (published  1/20/2020 - 8/2/2021)
+(2) Memory Card Game - JavaScript Tutorial from freeCodeCamp.org, 8/13/2018 (https://www.youtube.com/watch?v=ZniVgo8U7ek)
+ smr = Suzanne M Rizzo*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.parallax {
+
+    background-image: url("garden.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+nav {
+    width: 435px;
+    margin: 0%;
+    left: 0px;
+    top: 0px;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 29%;
+    margin-top: 5%;
+
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+li a {
+    float: left;
+    text-align: center;
+    background-color: deeppink;
+    opacity: .8;
+    border-style: outset;
+    margin: 1%;
+    padding: 1%
+}
+
+
+#gameContainer {
+    /*1)*/
+    width: 675px;
+    height: 550px;
+    margin: 0px auto;
+}
+
+p {
+    padding-top: 15px;
+
+}
+
+#hint {
+    /*1)*/
+    width: 160px;
+    height: 405px;
+    float: left;
+    padding-top: 3px;
+    text-align: center;
+    font-size: 26px;
+    border: 2px solid deeppink;
+    background-color: yellow;
+    color: deeppink;
+}
+
+#letters {
+    /*1)*/
+    width: 475px;
+    height: 350px;
+    float: right;
+    text-align: center;
+}
+
+input {
+    /*smr*/
+    width: 18px;
+    height: 18px;
+
+}
+
+.tile {
+    /*1)*/
+    width: 54px;
+    height: 45px;
+    padding-top: 9px;
+    border: 1px solid;
+    float: left;
+    border-radius: 2px;
+    font-size: 26px;
+    margin: 3px;
+    color: deeppink;
+    background-color: yellow;
+}
+
+
+.word {
+    /*smr*/
+    width: 54px;
+    height: 45px;
+    padding-top: 9px;
+    border: 1px solid;
+    float: left;
+    border-radius: 2px;
+    font-size: 26px;
+    margin: 3px;
+    color: deeppink;
+    background-color: yellow;
+}
+
+.colorBlue {
+    /*1)*/
+    background: skyblue;
+}
+
+#winText.hidden {
+    /*smr*/
+    visibility: hidden;
+}
+
+#winText.visible {
+    /*smr*/
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    animation: gameText-grow 500ms forwards;
+    color: darkorchid;
+    text-shadow: 4px 4px 4px black;
+    font-weight: 700;
+    position: fixed;
+    top: 100;
+    bottom: 100;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+@keyframes gameText-grow {
+    /*  text expansion animation idea taken from (2) */
+
+
+    from {
+        font-size: 0;
+    }
+
+    to {
+        font-size: 5em;
+    }
+}
+
+
+@media only screen and (max-width:320px) {
+
+    @keyframes gameText-grow {
+        /*  text expansion animation idea taken from (2) */
+
+
+        from {
+            font-size: 0;
+        }
+
+        to {
+            font-size: 4em;
+        }
+    }
+
+    header {
+        margin-left: 30%;
+        margin-top: 5%;
+        margin-bottom: 15%
+    }
+
+    #hint {
+        margin-left: 3%;
+        margin-top: 2%;
+    }
+
+    #letters {
+        margin-left: 2%;
+        margin-top: 2%;
+    }
+
+    #winText.visible {
+        top: 150;
+        bottom: 50;
+
+    }
+}

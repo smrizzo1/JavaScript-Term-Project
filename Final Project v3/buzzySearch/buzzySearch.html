@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search Bee</title>
+    <link href="../css/base.css" rel="stylesheet" type="text/css" />
+    <link href="css/buzzySearch.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+
+
+
+</head>
+
+<body class="parallax"></body>
+<nav>
+    <ul>
+        <li><a href="../Index.html"> Home Page</a></li>
+        <li><a href="../buzzyMatch/buzzyMatch.html"> Buzzy Match </a></li>
+        <li><a href="../buzzyGather/buzzyGather.html">Buzzy Gather</a></li>
+        <li><a href="readMebuzzySearch.html">Read Me</a>
+        </li>
+    </ul>
+</nav>
+
+<header>
+    <h1>
+        <p>Can you help Buzzy find all the words?</p>
+    </h1>
+</header>
+
+
+
+<div id="container">
+    <p id="MoveBuzzy"><img src="../media/cuteBee.png" width="50px" height="50px" /></p>
+</div>
+
+<div id="gameContainer">
+    <div id="hint"></div>
+    <div id="letters">
+        <div class="word" data-row="1" data-column="1">D</div>
+        <div class="word" data-row="1" data-column="2">A</div>
+        <div class="word" data-row="1" data-column="3">I</div>
+        <div class="word" data-row="1" data-column="4">S</div>
+        <div class="word" data-row="1" data-column="5">Y</div>
+        <div class="tile" data-row="1" data-column="6">J</div>
+        <div class="word" data-row="1" data-column="7">T</div>
+        <div class="tile" data-row="2" data-column="1">A</div>
+        <div class="word" data-row="2" data-column="2">B</div>
+        <div class="tile" data-row="2" data-column="3">Y</div>
+        <div class="word" data-row="2" data-column="4">U</div>
+        <div class="tile" data-row="2" data-column="5">S</div>
+        <div class="word" data-row="2" data-column="6">B</div>
+        <div class="word" data-row="2" data-column="7">U</div>
+        <div class="word" data-row="3" data-column="1">S</div>
+        <div class="word" data-row="3" data-column="2">U</div>
+        <div class="tile" data-row="3" data-column="3">W</div>
+        <div class="word" data-row="3" data-column="4">N</div>
+        <div class="tile" data-row="3" data-column="5">E</div>
+        <div class="word" data-row="3" data-column="6">U</div>
+        <div class="word" data-row="3" data-column="7">L</div>
+        <div class="word" data-row="4" data-column="1">P</div>
+        <div class="word" data-row="4" data-column="2">Z</div>
+        <div class="tile" data-row="4" data-column="3">X</div>
+        <div class="word" data-row="4" data-column="4">N</div>
+        <div class="tile" data-row="4" data-column="5">A</div>
+        <div class="word" data-row="4" data-column="6">M</div>
+        <div class="word" data-row="4" data-column="7">I</div>
+        <div class="word" data-row="5" data-column="1">R</div>
+        <div class="word" data-row="5" data-column="2">Z</div>
+        <div class="tile" data-row="5" data-column="3">I</div>
+        <div class="word" data-row="5" data-column="4">Y</div>
+        <div class="tile" data-row="5" data-column="5">R</div>
+        <div class="word" data-row="5" data-column="6">B</div>
+        <div class="word" data-row="5" data-column="7">P</div>
+        <div class="word" data-row="6" data-column="1">I</div>
+        <div class="word" data-row="6" data-column="2">Y</div>
+        <div class="tile" data-row="6" data-column="3">K</div>
+        <div class="tile" data-row="6" data-column="4">Q</div>
+        <div class="tile" data-row="6" data-column="5">H</div>
+        <div class="word" data-row="6" data-column="6">L</div>
+        <div class="tile" data-row="6" data-column="7">G</div>
+        <div class="word" data-row="7" data-column="1">N</div>
+        <div class="word" data-row="7" data-column="2">F</div>
+        <div class="word" data-row="7" data-column="3">L</div>
+        <div class="word" data-row="7" data-column="4">O</div>
+        <div class="word" data-row="7" data-column="5">W</div>
+        <div class="word" data-row="7" data-column="6">E</div>
+        <div class="word" data-row="7" data-column="7">R</div>
+        <div class="word" data-row="8" data-column="1">G</div>
+        <div class="word" data-row="8" data-column="2">A</div>
+        <div class="word" data-row="8" data-column="3">R</div>
+        <div class="word" data-row="8" data-column="4">D</div>
+        <div class="word" data-row="8" data-column="5">E</div>
+        <div class="word" data-row="8" data-column="6">N</div>
+        <div class="tile" data-row="8" data-column="7">C</div>
+
+    </div>
+    <div id="winText" class="hidden">You did it!</div>
+
+    </body>
+
+    <script src="../js/base.js"></script>
+    <script src="js/buzzySearch.js"></script>
+    <footer style="top:800px; position:absolute;">
+        <a href='https://www.freepik.com/vectors/background'>Background vector created by freepik -
+            www.freepik.com</a><br>
+
+        &copy; Suzanne Rizzo, 2022
+    </footer>
+
+</html>

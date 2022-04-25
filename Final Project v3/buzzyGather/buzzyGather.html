@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Buzzy Gather Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/base.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/buzzyGather.css" rel="stylesheet" type="text/css" media="all" />
+
+<body>
+
+
+
+    <nav>
+        <ul>
+            <li><a href="../Index.html"> Home Page</a></li>
+            <li><a href="../buzzyMatch/buzzyMatch.html"> Buzzy Match </a></li>
+            <li><a href="../buzzySearch/buzzySearch.html">Buzzy Search</a></li>
+            <li><a href="readMeBuzzyGather.html">Read Me</a>
+            </li>
+        </ul>
+    </nav>
+
+    <header>
+        <h2>
+            <p>Help Buzzy Bee collect the flowers - but don't get caught!</p>
+            <br>
+            <p id="playAgain1" class="hidden">Play again?</p>
+            <p id="playAgain2" class="hidden">Play again?</p>
+        </h2>
+    </header>
+
+    <button id="start" type="button" onclick="startGame()">Click to start</button>
+
+    <section>
+        <button id="b1" class="controls" onmousedown="moveup()" onmouseup="stopMove()"
+            ontouchstart="moveup()">UP</button><br><br>
+        <button id="b2" class="controls" onmousedown="moveleft()" onmouseup="stopMove()"
+            ontouchstart="moveleft()">LEFT</button>
+        <button id="b3" class="controls" onmousedown="moveright()" onmouseup="stopMove()"
+            ontouchstart="moveright()">RIGHT</button><br><br>
+        <button id="b4" class="controls" onmousedown="movedown()" onmouseup="stopMove()"
+            ontouchstart="movedown()">DOWN</button>
+    </section>
+    <script src="js/buzzyGather.js"></script>
+
+    <footer>
+        <a href='https://www.freepik.com/vectors/background'>Background vector created by freepik -
+            www.freepik.com</a><br>
+        <p>&copy; Suzanne Rizzo 2022</p>
+    </footer>
+
+
+</body>
+
+</html>

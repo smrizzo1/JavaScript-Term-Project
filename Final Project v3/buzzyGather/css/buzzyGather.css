@@ -1,0 +1,265 @@
+/*1) JavaScript Flappy Bird with Particles & Sprites, Franks laboratory, 6/19/2020, https://www.youtube.com/watch?v=lGJ9i6CYKyQ
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+canvas {
+    /*styling based on 1)*/
+    position: absolute;
+    margin-top: 6%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid darkorchid;
+    background-image: url('../media/garden.jpg');
+    background-size: cover;
+    text-align: center;
+}
+
+body {
+    background-color: skyblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    font-size: large;
+    flex-wrap: wrap;
+    margin-left: 1%;
+    margin-top: 3%;
+
+}
+
+#start {
+    position: absolute;
+    left: 650px;
+    top: 300px;
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: darkgreen;
+    border: 4px outset white;
+    font-size: x-large;
+    text-align: center;
+}
+
+#playAgain1 {
+    position: absolute;
+    left: 675px;
+    top: 450px;
+    color: darkviolet;
+    font-size: 1.25em;
+    text-align: center;
+    text-shadow: none;
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+
+#playAgain2 {
+    position: absolute;
+    left: 600px;
+    top: 450px;
+    color: darkviolet;
+    font-size: 1.25em;
+    text-align: center;
+    text-shadow: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+nav {
+    width: 500px;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+li a {
+    float: left;
+    text-align: center;
+    background-color: deeppink;
+    opacity: .8;
+    border-style: outset;
+    margin: 1%;
+    padding: 1%
+}
+
+div {
+    width: 100%;
+    text-align: center;
+    max-width: 800px;
+    margin-top: 1%;
+}
+
+.controls {
+    color: darkviolet;
+    font-size: 1.5em;
+    background-color: yellow;
+    font-weight: bold;
+    border: 2px outset darkviolet;
+    margin: 1%;
+    padding: 1%
+}
+
+#b1 {
+    position: absolute;
+    left: 105px;
+    top: 250px;
+}
+
+#b2 {
+    position: absolute;
+    left: 25px;
+    top: 325px;
+}
+
+#b3 {
+    position: absolute;
+    left: 160px;
+    top: 325px;
+}
+
+#b4 {
+    position: absolute;
+    left: 85px;
+    top: 400px;
+}
+
+footer {
+    margin-top: 700px;
+    bottom: 0;
+    left: 0;
+    font-size: small;
+}
+
+
+@media only screen and (max-width:1024px) {
+
+    canvas {
+        margin-top: 1%;
+        top: 50%;
+        left: 50%;
+    }
+
+    header {
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+
+    #b1 {
+        position: absolute;
+        left: 460px;
+        top: 655px;
+    }
+
+    #b2 {
+        position: absolute;
+        left: 345px;
+        top: 690px;
+    }
+
+    #b3 {
+        position: absolute;
+        left: 550px;
+        top: 690px;
+    }
+
+    #b4 {
+        position: absolute;
+        left: 440px;
+        top: 725px;
+    }
+
+    #start {
+        left: 400px;
+        top: 300px;
+    }
+
+    #playAgain1 {
+        left: 400px;
+        top: 450px;
+    }
+
+    #playAgain2 {
+        left: 350px;
+        top: 450px;
+    }
+
+}
+
+@media only screen and (max-width:320px) {
+
+    canvas {
+        margin: 0%;
+        top: 450px;
+        left: 400px;
+
+    }
+
+    h2 {
+        font-size: larger;
+        text-shadow: 1px 1px 1px black;
+        text-align: left;
+    }
+
+    #b1 {
+        position: absolute;
+        left: 215px;
+        top: 750px;
+    }
+
+    #b2 {
+        position: absolute;
+        left: 145px;
+        top: 800px;
+    }
+
+    #b3 {
+        position: absolute;
+        left: 255px;
+        top: 800px;
+    }
+
+    #b4 {
+        position: absolute;
+        left: 195px;
+        top: 850px;
+    }
+
+    #start {
+        left: 135px;
+        top: 400px;
+    }
+
+    #playAgain1 {
+        left: 400px;
+        top: 450px;
+    }
+
+    #playAgain2 {
+        left: 350px;
+        top: 450px;
+    }
+
+    footer {
+        margin-top: 825px;
+        bottom: 0;
+        left: 0;
+        font-size: small;
+    }
+
+}

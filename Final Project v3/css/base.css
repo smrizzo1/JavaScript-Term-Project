@@ -1,0 +1,95 @@
+/* base CSS for all games*/
+
+body {
+    background-color: skyblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header {
+    text-align: center;
+    color: darkviolet;
+}
+
+#container {
+    width: 50px;
+    height: 100px;
+    position: relative;
+}
+
+
+h1 {
+    color: darkviolet;
+    font-size: 2em;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+}
+
+h2 {
+    color: darkviolet;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: yellow;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: green;
+}
+
+a:active {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    margin-top: 18%;
+    bottom: 0;
+    left: 0;
+    font-size: small;
+}
+
+/* CSS for individual games - move*/
+
+
+#buzzyButtons {
+    width: 200px;
+    color: white;
+    background-color: none;
+
+}
+
+#bee {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background-color: none;
+    margin-left: 10px;
+}
+
+
+@media only screen and (max-width:1024px) {}
+
+@media only screen and (max-width:320px) {
+
+    h1 {
+
+        font-size: large;
+    }
+
+    h2 {
+        font-size: medium;
+    }
+
+
+}
